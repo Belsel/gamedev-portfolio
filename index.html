@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iván Contreras Guevara — Game Developer</title>
+    <meta
+      name="description"
+      content="Game developer portfolio — Unity Tech Lead on NILSH, Gameplay Programmer on Fable Hospital."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-unity" viewBox="0 0 24 24"><path d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z" /></symbol>
+      <symbol id="icon-unreal" viewBox="0 0 24 24"><path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zm0 23.52A11.52 11.52 0 1123.52 12 11.52 11.52 0 0112 23.52zm7.13-9.791c-.206.997-1.126 3.557-4.06 4.942l-1.179-1.325-1.988 2a7.338 7.338 0 01-5.804-2.978 2.859 2.859 0 00.65.123c.326.006.678-.114.678-.66v-5.394a.89.89 0 00-1.116-.89c-.92.212-1.656 2.509-1.656 2.509a7.304 7.304 0 012.528-5.597 7.408 7.408 0 013.73-1.721c-1.006.573-1.57 1.507-1.57 2.29 0 1.262.76 1.109.984.923v7.28a1.157 1.157 0 00.148.256 1.075 1.075 0 00.88.445c.76 0 1.747-.868 1.747-.868V9.172c0-.6-.452-1.324-.905-1.572 0 0 .838-.149 1.484.346a5.537 5.537 0 01.387-.425c1.508-1.48 2.929-1.902 4.112-2.112 0 0-2.151 1.69-2.151 3.96 0 1.687.043 5.801.043 5.801.799.771 1.986-.342 3.059-1.441Z" /></symbol>
+      <symbol id="icon-godot" viewBox="0 0 24 24"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001zM6.4765 9.9889c1.2971 0 2.3492 1.0511 2.3492 2.3482s-1.052 2.3482-2.3492 2.3482c-1.296 0-2.3482-1.051-2.3482-2.3482 0-1.297 1.0511-2.3482 2.3482-2.3482zm11.049 0c1.296 0 2.3482 1.0511 2.3482 2.3482s-1.0511 2.3482-2.3482 2.3482-2.3492-1.051-2.3492-2.3482c0-1.297 1.051-2.3482 2.3492-2.3482zm-10.824.9301c-.861 0-1.559.698-1.559 1.5591s.698 1.5582 1.559 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5591-1.559zm10.598 0c-.8611 0-1.5582.698-1.5582 1.5591s.697 1.5582 1.5581 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5592-1.559zm-5.2985.453c.417 0 .757.308.757.6871v2.1622c0 .379-.339.687-.757.687s-.756-.308-.756-.687V12.059c0-.379.339-.687.756-.687zM1.4601 16.9464c.002.377.006.789.006.871 0 3.7014 4.6944 5.4795 10.5269 5.5005h.014c5.8325-.02 10.5259-1.7991 10.5259-5.5004 0-.084.005-.495.007-.871l-3.5023.338-.121 1.729a.421.421 0 01-.389.3901l-4.1814.296a.4203.4203 0 01-.415-.358l-.238-1.6141h-3.3863l-.238 1.6141a.4192.4192 0 01-.4451.357l-4.1513-.296c-.208-.015-.375-.181-.389-.389l-.12-1.7292-3.5044-.337z" /></symbol>
+      <symbol id="icon-csharp" viewBox="0 0 128 128"><path d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6zm-53.5 70c-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.5C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8zM115 62h-3.2l-.9 4h4.1v5h-5l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6H94v-5h3.5l.9-4H94v-5h5.3l1.2-6h4.9l-1.2 6h3.8l1.2-6h4.8l-1.2 6h2.2v5zm-12.7 4h3.8l.9-4h-3.8z" /></symbol>
+      <symbol id="icon-spine" viewBox="0 0 24 24"><path d="M7.157 2.207c.066 2.004 1.454 3.117 4.221 3.55 2.345.368 4.46.181 5.151-1.829C17.874.01 14.681.985 11.915.55S7.051-1.013 7.157 2.207m.831 8.23c.257 1.497 1.652 2.355 3.786 2.297 2.135-.059 3.728-.892 3.949-2.507.409-2.988-1.946-1.832-4.08-1.774-2.136.059-4.161-.952-3.655 1.984m2.778 6.852c.424 1.117 1.587 1.589 3.159 1.253 1.569-.335 2.656-.856 2.568-2.129-.159-2.357-1.713-1.616-3.283-1.279-1.571.333-3.272-.039-2.444 2.155m1.348 5.221c.123.943.939 1.5 2.215 1.49 1.279-.011 2.248-.515 2.412-1.525.308-1.871-1.123-1.175-2.4-1.165-1.28.01-2.47-.65-2.227 1.2" /></symbol>
+      <symbol id="icon-fmod" viewBox="0 9.5 24 6"><path d="M3.3522 10.17a.903.903 0 0 0-.903.903v4.0696H1.127v-2.8134H0v-1.318h1.1284a2.2252 2.2252 0 0 1 2.2238-2.1703H4.673v1.3222zm7.3257 1.8403a.2501.2501 0 0 0-.2378.1732l-.532 1.8348a1.564 1.564 0 0 1-3.0016 0l-.532-1.8348a.2515.2515 0 0 0-.4769 0l-.5319 1.8348a1.5723 1.5723 0 0 1-1.5118 1.123h-.3684v-1.3195h.3739a.2474.2474 0 0 0 .235-.1732l.5319-1.8348a1.5696 1.5696 0 0 1 3.0086 0l.536 1.8376a.246.246 0 0 0 .4714 0l.532-1.8349a1.5696 1.5696 0 0 1 3.0086 0l.5319 1.8349a.2474.2474 0 0 0 .235.1731h.3738v1.3195h-.3683a1.571 1.571 0 0 1-1.5119-1.123l-.5319-1.8348a.2515.2515 0 0 0-.2336-.1759zm2.6897.9058a2.2252 2.2252 0 1 1 2.2252 2.2251 2.2252 2.2252 0 0 1-2.2252-2.2251zm3.1282 0a.903.903 0 1 0-.903.903.903.903 0 0 0 .903-.903zm4.6744.4604a.962.962 0 0 0 .0673-.1237.6707.6707 0 0 1 1.2659.3079.6542.6542 0 0 1-.055.2625l-.0192.0398a2.2678 2.2678 0 0 1-2.0342 1.2755 2.2252 2.2252 0 0 1 0-4.4504h.0976a2.25 2.25 0 0 1 1.0143.2914V8.8409h1.3222v3.01a.7422.7422 0 0 1-.712.7215 1.5902 1.5902 0 0 1-1.0692-.3738.9016.9016 0 0 0-.5498-.191h-.0976a.903.903 0 1 0 .7752 1.3661zM4.2277 11.624a.7037.7037 0 0 1-.7037.7037.7037.7037 0 0 1-.7037-.7037.7037.7037 0 0 1 .7037-.7037.7037.7037 0 0 1 .7037.7037zm18.398 2.8354a.6872.6872 0 1 0 .6872-.6748.6776.6776 0 0 0-.6872.6748zm.1237 0a.5594.5594 0 1 1 .5608.5828.558.558 0 0 1-.565-.5828zm.2817.3821h.1237v-.3408h.1375l.2158.3408h.1374l-.2268-.3505a.2034.2034 0 0 0 .209-.2157c0-.1526-.0894-.2268-.275-.2268h-.3064zm.1237-.6872h.1581c.0838 0 .1746.0165.1746.121 0 .1044-.1004.1374-.209.1374h-.1292z" /></symbol>
+      <symbol id="icon-git" viewBox="0 0 24 24"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" /></symbol>
+      <symbol id="icon-jira" viewBox="0 0 24 24"><path d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.758a1.001 1.001 0 0 0-1.001-1.001zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.001 1.001 0 0 0 23.013 0Z" /></symbol>
+      <symbol id="icon-java" viewBox="0 0 24 24"><path d="M11.915 0 11.7.215C9.515 2.4 7.47 6.39 6.046 10.483c-1.064 1.024-3.633 2.81-3.711 3.551-.093.87 1.746 2.611 1.55 3.235-.198.625-1.304 1.408-1.014 1.939.1.188.823.011 1.277-.491a13.389 13.389 0 0 0-.017 2.14c.076.906.27 1.668.643 2.232.372.563.956.911 1.667.911.397 0 .727-.114 1.024-.264.298-.149.571-.33.91-.5.68-.34 1.634-.666 3.53-.604 1.903.062 2.872.39 3.559.704.687.314 1.15.664 1.925.664.767 0 1.395-.336 1.807-.9.412-.563.631-1.33.72-2.24.06-.623.055-1.32 0-2.066.454.45 1.117.604 1.213.424.29-.53-.816-1.314-1.013-1.937-.198-.624 1.642-2.366 1.549-3.236-.08-.748-2.707-2.568-3.748-3.586C16.428 6.374 14.308 2.394 12.13.215zm.175 6.038a2.95 2.95 0 0 1 2.943 2.942 2.95 2.95 0 0 1-2.943 2.943A2.95 2.95 0 0 1 9.148 8.98a2.95 2.95 0 0 1 2.942-2.942zM8.685 7.983a3.515 3.515 0 0 0-.145.997c0 1.951 1.6 3.55 3.55 3.55 1.95 0 3.55-1.598 3.55-3.55 0-.329-.046-.648-.132-.951.334.095.64.208.915.336a42.699 42.699 0 0 1 2.042 5.829c.678 2.545 1.01 4.92.846 6.607-.082.844-.29 1.51-.606 1.94-.315.431-.713.651-1.315.651-.593 0-.932-.27-1.673-.61-.741-.338-1.825-.694-3.792-.758-1.974-.064-3.073.293-3.821.669-.375.188-.659.373-.911.5s-.466.2-.752.2c-.53 0-.876-.209-1.16-.64-.285-.43-.474-1.101-.545-1.948-.141-1.693.176-4.069.823-6.614a43.155 43.155 0 0 1 1.934-5.783c.348-.167.749-.31 1.192-.425zm-3.382 4.362a.216.216 0 0 1 .13.031c-.166.56-.323 1.116-.463 1.665a33.849 33.849 0 0 0-.547 2.555 3.9 3.9 0 0 0-.2-.39c-.58-1.012-.914-1.642-1.16-2.08.315-.24 1.679-1.755 2.24-1.781zm13.394.01c.562.027 1.926 1.543 2.24 1.783-.246.438-.58 1.068-1.16 2.08a4.428 4.428 0 0 0-.163.309 32.354 32.354 0 0 0-.562-2.49 40.579 40.579 0 0 0-.482-1.652.216.216 0 0 1 .127-.03z" /></symbol>
+      <symbol id="icon-spring" viewBox="0 0 24 24"><path d="m23.693 10.7058-4.73-8.1844c-.4094-.7106-1.4166-1.2942-2.2402-1.2942H7.2725c-.819 0-1.8308.5836-2.2402 1.2942L.307 10.7058c-.4095.7106-.4095 1.873 0 2.5837l4.7252 8.189c.4094.7107 1.4166 1.2943 2.2402 1.2943h9.455c.819 0 1.826-.5836 2.2402-1.2942l4.7252-8.189c.4095-.7107.4095-1.8732 0-2.5838zM10.9763 5.7547c0-.5365.4377-.9742.9742-.9742s.9742.4377.9742.9742v5.8217c0 .5366-.4377.9742-.9742.9742s-.9742-.4376-.9742-.9742zm.9742 12.4294c-3.6427 0-6.6077-2.965-6.6077-6.6077.0047-2.0896.993-4.0521 2.6685-5.304a.8657.8657 0 0 1 1.2142.1788.8657.8657 0 0 1-.1788 1.2143c-2.1602 1.6048-2.612 4.6592-1.0072 6.8194 1.6049 2.1603 4.6593 2.612 6.8195 1.0072 1.2378-.9177 1.9673-2.372 1.9673-3.9157a4.8972 4.8972 0 0 0-1.9861-3.925c-.386-.2824-.466-.8284-.1836-1.2143.2824-.386.8283-.466 1.2143-.1835 1.6895 1.2471 2.6826 3.2238 2.6873 5.3228 0 3.6474-2.965 6.6077-6.6077 6.6077z" /></symbol>
+      <symbol id="icon-react" viewBox="0 0 24 24"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" /></symbol>
+      <symbol id="icon-network" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 1 1 5.83V11h5a2 2 0 0 1 2 2v3.17a3 3 0 1 1-2 0V13h-5v3.17a3 3 0 1 1-2 0V13H6v3.17a3 3 0 1 1-2 0V13a2 2 0 0 1 2-2h5V7.83A3 3 0 0 1 12 2Z" /></symbol>
+      <symbol id="icon-cycle" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 1 7.75 6h-2.08A6 6 0 0 0 7.76 7.76L10 10H4V4l2.34 2.34A7.97 7.97 0 0 1 12 4Zm-7.75 10h2.08a6 6 0 0 0 9.91 2.24L14 14h6v6l-2.34-2.34A8 8 0 0 1 4.25 14Z" /></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm5.3 6.3L10.5 15l-3.8-3.8-1.4 1.4 5.2 5.2 8.2-8.1-1.4-1.4Z" /></symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24"><path d="M12 2c4.97 0 9 1.57 9 3.5S16.97 9 12 9 3 7.43 3 5.5 7.03 2 12 2ZM3 8.3C4.9 9.9 8.6 10.8 12 10.8s7.1-.9 9-2.5v3.2c0 1.93-4.03 3.5-9 3.5s-9-1.57-9-3.5V8.3Zm0 6C4.9 15.9 8.6 16.8 12 16.8s7.1-.9 9-2.5v4.2c0 1.93-4.03 3.5-9 3.5s-9-1.57-9-3.5v-4.2Z" /></symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm-2.6 2.5A8 8 0 0 0 4.25 11h3.78c.1-2.4.6-4.68 1.37-6.5ZM12 4c-.97 1.3-1.83 3.83-1.97 7h3.94C13.83 7.83 12.97 5.3 12 4Zm2.6.5c.77 1.82 1.27 4.1 1.37 6.5h3.78a8 8 0 0 0-5.15-6.5ZM4.25 13a8 8 0 0 0 5.15 6.5c-.77-1.82-1.27-4.1-1.37-6.5H4.25Zm5.78 0c.14 3.17 1 5.7 1.97 7 .97-1.3 1.83-3.83 1.97-7h-3.94Zm5.94 0c-.1 2.4-.6 4.68-1.37 6.5a8 8 0 0 0 5.15-6.5h-3.78Z" /></symbol>
+    </svg>
+
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="#top" class="logo">Iván Contreras Guevara</a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#games"
+              ><span class="en">Games</span><span class="es">Juegos</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills"
+              ><span class="en">Skills</span
+              ><span class="es">Habilidades</span></a
+            >
+          </li>
+          <li>
+            <a href="#experience"
+              ><span class="en">Experience</span
+              ><span class="es">Experiencia</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><span class="en">Contact</span
+              ><span class="es">Contacto</span></a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Cambiar a español / Switch to English"
+          >
+            ES
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark/light theme"
+          >
+            🌙
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <h1>Iván Contreras Guevara</h1>
+        <p class="hero-tagline">
+          <span class="en">Unity Developer · Tech Lead</span>
+          <span class="es">Desarrollador Unity · Tech Lead</span>
+        </p>
+        <p class="hero-summary">
+          <span class="en">
+            Game developer with a Master's in Video Game Design &amp;
+            Development and a background in backend engineering. Currently Unity
+            Tech Lead on <strong>NILSH</strong>; previously gameplay programmer
+            on <strong>Fable Hospital</strong>.
+          </span>
+          <span class="es">
+            Desarrollador de videojuegos con un Máster en Diseño y Desarrollo de
+            Videojuegos y experiencia previa en ingeniería backend. Actualmente
+            Unity Tech Lead en <strong>NILSH</strong>; antes, programador de
+            gameplay en <strong>Fable Hospital</strong>.
+          </span>
+        </p>
+        <div class="hero-links">
+          <a href="#games" class="btn btn-primary"
+            ><span class="en">See my games</span
+            ><span class="es">Ver mis juegos</span></a
+          >
+          <a
+            href="cv/CV-Ivan-Contreras-Guevara-EN.pdf"
+            class="btn en"
+            target="_blank"
+            rel="noopener"
+            >CV (PDF)</a
+          >
+          <a
+            href="cv/CV-Ivan-Contreras-Guevara-ES.pdf"
+            class="btn es"
+            target="_blank"
+            rel="noopener"
+            >CV (PDF)</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ivan-contreras-guevara/"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
+
+      <section id="games" class="section container">
+        <h2><span class="en">Games</span><span class="es">Juegos</span></h2>
+
+        <div class="game-list">
+          <article class="game-card">
+            <a
+              href="https://store.steampowered.com/app/4916130/NILSH/"
+              class="game-media"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/nilsh.jpg"
+                alt="NILSH key art"
+                width="460"
+                height="215"
+                loading="lazy"
+              />
+            </a>
+            <div class="game-body">
+              <div class="game-head">
+                <h3>NILSH</h3>
+                <span class="badge badge-live"
+                  ><span class="en">In development</span
+                  ><span class="es">En desarrollo</span></span
+                >
+              </div>
+              <p class="game-role">
+                <span class="en">Unity Tech Lead · 2026</span
+                ><span class="es">Unity Tech Lead · 2026</span>
+              </p>
+              <p class="game-meta">
+                Equipo Hoja · PC (Steam) ·
+                <span class="en">Action-adventure</span
+                ><span class="es">Acción-aventura</span>
+              </p>
+              <p>
+                <span class="en">
+                  An exploration-focused action-adventure: explore a fantasy
+                  world where nature is fading away, battle corrupted creatures
+                  and solve environmental puzzles.
+                </span>
+                <span class="es">
+                  Una acción-aventura centrada en la exploración: recorre un
+                  mundo de fantasía donde la naturaleza se desvanece, combate
+                  criaturas corrompidas y resuelve puzles de entorno.
+                </span>
+              </p>
+              <!-- TODO: add 2–4 bullets on what you own as tech lead (architecture, tooling, code reviews, systems you built) -->
+              <div class="game-links">
+                <a
+                  href="https://store.steampowered.com/app/4916130/NILSH/"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="en">View on Steam</span
+                  ><span class="es">Ver en Steam</span></a
+                >
+                <a href="https://nilsh.games" target="_blank" rel="noopener"
+                  ><span class="en">Official site</span
+                  ><span class="es">Web oficial</span></a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <a
+              href="https://store.steampowered.com/app/2726060/Fable_Hospital/"
+              class="game-media"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/fable-hospital.jpg"
+                alt="Fable Hospital key art"
+                width="460"
+                height="215"
+                loading="lazy"
+              />
+            </a>
+            <div class="game-body">
+              <div class="game-head">
+                <h3>Fable Hospital</h3>
+                <span class="badge"
+                  ><span class="en">Released 2025</span
+                  ><span class="es">Publicado 2025</span></span
+                >
+              </div>
+              <p class="game-role">
+                <span class="en">Gameplay Programmer · 2025</span
+                ><span class="es">Programador de gameplay · 2025</span>
+              </p>
+              <p class="game-meta">
+                AMGames TC · PC (Steam) · <span class="en">Management sim</span
+                ><span class="es">Simulación de gestión</span>
+              </p>
+              <p>
+                <span class="en">
+                  A medieval hospital management sim with a touch of fantasy and
+                  humor: cure ridiculous diseases, manage an eccentric staff and
+                  gather resources.
+                </span>
+                <span class="es">
+                  Un simulador de gestión de hospital medieval con fantasía y
+                  humor: cura enfermedades disparatadas, gestiona un equipo
+                  excéntrico y recolecta recursos.
+                </span>
+              </p>
+              <!-- TODO: add 2–4 bullets on the gameplay systems you built (e.g. patient AI, staff management, UI) -->
+              <div class="game-links">
+                <a
+                  href="https://store.steampowered.com/app/2726060/Fable_Hospital/"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="en">View on Steam</span
+                  ><span class="es">Ver en Steam</span></a
+                >
+                <a
+                  href="https://www.devuego.es/en/presskit/fable-hospital"
+                  target="_blank"
+                  rel="noopener"
+                  ><span class="en">Press kit</span
+                  ><span class="es">Press kit</span></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="sub-heading">
+          <span class="en">More game work</span
+          ><span class="es">Otros proyectos</span>
+        </h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <a
+              href="https://devuego.es/bd/en/presskit/chess-revolution"
+              class="project-media project-media-top"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/chess-revolution.jpg"
+                alt="Chess Revolution key art"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </a>
+            <h3>Chess Revolution</h3>
+            <p class="project-tech">
+              The Traveler Games · <span class="en">Strategy · PC</span
+              ><span class="es">Estrategia · PC</span>
+            </p>
+            <p>
+              <span class="en"
+                >Design and development on a strategy chess game for
+                Windows.</span
+              >
+              <span class="es"
+                >Diseño y desarrollo de un juego de estrategia basado en el
+                ajedrez para Windows.</span
+              >
+            </p>
+            <div class="project-links">
+              <a
+                href="https://devuego.es/bd/en/presskit/chess-revolution"
+                target="_blank"
+                rel="noopener"
+                ><span class="en">Press kit</span
+                ><span class="es">Press kit</span></a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media project-media-logo">
+              <img
+                src="assets/digital-monster-collective.jpg"
+                alt="Digital Monster Collective logo"
+                width="225"
+                height="157"
+                loading="lazy"
+              />
+            </div>
+            <h3>Legends of Learning</h3>
+            <p class="project-tech">
+              Digital Monster Collective · <span class="en">Serious games</span
+              ><span class="es">Serious games</span>
+            </p>
+            <p>
+              <span class="en"
+                >Designed and developed several educational serious games for
+                the Legends of Learning platform.</span
+              >
+              <span class="es"
+                >Diseño y desarrollo de varios serious games educativos para la
+                plataforma Legends of Learning.</span
+              >
+            </p>
+          </article>
+
+          <article class="project-card">
+            <a
+              href="https://github.com/Belsel/mochicake-tech-interview"
+              class="project-media"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/virtual-chess.jpg"
+                alt="Carved wooden chess pieces on a board"
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+            </a>
+            <h3>Virtual Chess</h3>
+            <p class="project-tech">Unity · C# · Minimax + Alpha-Beta</p>
+            <p>
+              <span class="en">
+                3D chess with a minimax + alpha-beta AI using piece-square
+                tables, juicy game feel (camera shake, arcing moves, highlight
+                pulses) and a modular, unit-tested architecture.
+              </span>
+              <span class="es">
+                Ajedrez 3D con IA minimax + poda alfa-beta y tablas de valor por
+                casilla, game feel cuidado (camera shake, movimientos en arco,
+                pulsos de resaltado) y una arquitectura modular con tests
+                unitarios.
+              </span>
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/Belsel/mochicake-tech-interview"
+                target="_blank"
+                rel="noopener"
+                ><span class="en">GitHub</span><span class="es">GitHub</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <h2>
+          <span class="en">Skills</span><span class="es">Habilidades</span>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>
+              <span class="en">Engines &amp; languages</span><span class="es">Motores y lenguajes</span>
+            </h4>
+            <ul class="skill-list">
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-unity" />
+                </svg>
+                Unity
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-unreal" />
+                </svg>
+                Unreal Engine 5
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-godot" />
+                </svg>
+                Godot
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-csharp" />
+                </svg>
+                C#
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>
+              <span class="en">Game tech</span><span class="es">Tecnología de juego</span>
+            </h4>
+            <ul class="skill-list">
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-network" />
+                </svg>
+                Netcode for GameObjects
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-spine" />
+                </svg>
+                Spine
+              </li>
+              <li>
+                <svg class="skill-icon skill-icon-wide" aria-hidden="true">
+                  <use href="#icon-fmod" />
+                </svg>
+                FMOD
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>
+              <span class="en">Workflow</span><span class="es">Flujo de trabajo</span>
+            </h4>
+            <ul class="skill-list">
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-git" />
+                </svg>
+                Git
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-jira" />
+                </svg>
+                Jira
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-cycle" />
+                </svg>
+                SCRUM (Agile)
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-check" />
+                </svg>
+                <span class="en">Unit testing</span><span class="es">Tests unitarios</span>
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>
+              <span class="en">Backend &amp; tools</span><span class="es">Backend y herramientas</span>
+            </h4>
+            <ul class="skill-list">
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-java" />
+                </svg>
+                Java
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-spring" />
+                </svg>
+                Spring Boot
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-react" />
+                </svg>
+                React
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-database" />
+                </svg>
+                SQL
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>
+              <span class="en">Languages</span><span class="es">Idiomas</span>
+            </h4>
+            <ul class="skill-list">
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-globe" />
+                </svg>
+                <span class="en">Spanish</span><span class="es">Español</span>
+              </li>
+              <li>
+                <svg class="skill-icon" aria-hidden="true">
+                  <use href="#icon-globe" />
+                </svg>
+                <span class="en">English</span><span class="es">Inglés</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section container">
+        <h2>
+          <span class="en">Experience</span><span class="es">Experiencia</span>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date"
+              >2026 – <span class="en">present</span
+              ><span class="es">actualidad</span></span
+            >
+            <h3>Unity Tech Lead</h3>
+            <p class="timeline-org">Equipo Hoja · NILSH</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2024 – 2025</span>
+            <h3>
+              <span class="en">Game Developer</span
+              ><span class="es">Desarrollador de videojuegos</span>
+            </h3>
+            <p class="timeline-org">
+              The Traveler Games · AMGames · Digital Monster Collective
+            </p>
+            <p>
+              <span class="en"
+                >Gameplay programmer on Fable Hospital; design and development
+                on Chess Revolution and serious games for Legends of Learning,
+                using Spine, FMOD and Netcode for GameObjects.</span
+              >
+              <span class="es"
+                >Programador de gameplay en Fable Hospital; diseño y desarrollo
+                de Chess Revolution y serious games para Legends of Learning,
+                usando Spine, FMOD y Netcode for GameObjects.</span
+              >
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2018 – 2021</span>
+            <h3>
+              <span class="en">Backend / Full Stack Developer</span
+              ><span class="es">Desarrollador Backend / Full Stack</span>
+            </h3>
+            <p class="timeline-org">Indra · SIIG · Accenture</p>
+            <p>
+              <span class="en"
+                >Java Spring Boot services, databases and code quality (JUnit,
+                Mockito, SonarQube) in enterprise and defense projects.</span
+              >
+              <span class="es"
+                >Servicios Java Spring Boot, bases de datos y calidad de código
+                (JUnit, Mockito, SonarQube) en proyectos empresariales y de
+                defensa.</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">
+          <span class="en">Education</span><span class="es">Formación</span>
+        </h3>
+        <ul class="education-list">
+          <li>
+            <strong
+              ><span class="en"
+                >Master's in Video Game Design &amp; Development</span
+              ><span class="es"
+                >Máster en Diseño y Desarrollo de Videojuegos</span
+              ></strong
+            >
+            — EVAD, 2022–2024
+          </li>
+          <li>
+            <strong
+              ><span class="en"
+                >Higher Diploma in Cross-Platform Application Development</span
+              ><span class="es"
+                >Grado Superior en Desarrollo de Aplicaciones
+                Multiplataforma</span
+              ></strong
+            >
+            — Cesur, 2018–2020
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2><span class="en">Contact</span><span class="es">Contacto</span></h2>
+        <p>
+          <span class="en"
+            >Open to game development roles — Unity, gameplay and technical
+            leadership.</span
+          >
+          <span class="es"
+            >Abierto a puestos de desarrollo de videojuegos — Unity, gameplay y
+            liderazgo técnico.</span
+          >
+        </p>
+        <div class="hero-links">
+          <a href="mailto:i.contrerasGuevara@outlook.es" class="btn btn-primary"
+            >i.contrerasGuevara@outlook.es</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ivan-contreras-guevara/"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/Belsel"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="cv/CV-Ivan-Contreras-Guevara-EN.pdf"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >CV (EN)</a
+          >
+          <a
+            href="cv/CV-Ivan-Contreras-Guevara-ES.pdf"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            >CV (ES)</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Iván Contreras Guevara ·
+        <span class="en">Game art and logos © their respective owners</span
+        ><span class="es"
+          >Arte de los juegos y logotipos © sus respectivos propietarios</span
+        >
+      </p>
+      <p class="site-credits">
+        <span class="en"
+          >Virtual Chess photo by Maarten van den Heuvel (CC0) · Godot logo by
+          Andrea Calabró (CC BY 4.0)</span
+        ><span class="es"
+          >Foto de Virtual Chess de Maarten van den Heuvel (CC0) · Logotipo de
+          Godot de Andrea Calabró (CC BY 4.0)</span
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
