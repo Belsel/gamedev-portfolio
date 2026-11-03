@@ -1,17 +1,41 @@
-# Game Dev Portfolio — Iván Contreras Guevara
+# Iván Contreras Guevara — Game Developer
 
-Static single-page game development portfolio (plain HTML/CSS/JS) with an EN/ES toggle, deployable to GitHub Pages.
+**Unity Developer · Tech Lead**
 
-## Structure
+Game developer with a Master's in Video Game Design & Development and a background in backend engineering. Currently Unity Tech Lead on **NILSH**; previously gameplay programmer on **Fable Hospital**.
 
-- `index.html` — page content; every translatable string has an `.en` and `.es` span
-- `style.css` — theming (light/dark), layout, language visibility
-- `script.js` — nav toggle, theme toggle, language toggle (defaults to the browser language)
-- `assets/` — game key art (Steam pages and press kits), studio logo, and a CC0 stock photo for Virtual Chess
-- `cv/` — CV PDFs in English and Spanish
+**[View the portfolio →](https://belsel.github.io/gamedev-portfolio/)** (English and Spanish)
 
-## Deploying to GitHub Pages
+[CV (EN)](cv/CV-Ivan-Contreras-Guevara-EN.pdf) · [CV (ES)](cv/CV-Ivan-Contreras-Guevara-ES.pdf) · [LinkedIn](https://www.linkedin.com/in/ivan-contreras-guevara/) · [i.contrerasGuevara@outlook.es](mailto:i.contrerasGuevara@outlook.es)
 
-1. Create an empty GitHub repo (e.g. `gamedev-portfolio`) and push this folder to it.
-2. Repo Settings → Pages → Source: deploy from `main` branch, root folder.
-3. Site will be live at `https://<username>.github.io/<repo>/`.
+## Featured games
+
+| [![NILSH key art](assets/nilsh.jpg)](https://store.steampowered.com/app/4916130/NILSH/) | [![Fable Hospital key art](assets/fable-hospital.jpg)](https://store.steampowered.com/app/2726060/Fable_Hospital/) |
+| :--- | :--- |
+| **NILSH** — Unity Tech Lead, 2026 | **Fable Hospital** — Gameplay Programmer, 2025 |
+| Exploration-focused action-adventure in a fantasy world where nature is fading away. In development at Equipo Hoja. | Medieval hospital management sim with fantasy and humor. Released in 2025, AMGames TC. |
+| [Steam](https://store.steampowered.com/app/4916130/NILSH/) · [Official site](https://nilsh.games) | [Steam](https://store.steampowered.com/app/2726060/Fable_Hospital/) · [Press kit](https://www.devuego.es/en/presskit/fable-hospital) |
+
+## More game work
+
+- **[Chess Revolution](https://devuego.es/bd/en/presskit/chess-revolution)** (The Traveler Games): design and development on a strategy chess game for Windows.
+- **Legends of Learning** (Digital Monster Collective): designed and developed several educational serious games for the platform.
+- **[Virtual Chess](https://github.com/Belsel/mochicake-tech-interview)** (Unity, C#): 3D chess with a minimax + alpha-beta AI, polished game feel and a modular, unit-tested architecture.
+
+## Skills
+
+| | |
+| :--- | :--- |
+| **Engines & languages** | Unity, Unreal Engine 5, Godot, C# |
+| **Game tech** | Netcode for GameObjects, Spine, FMOD |
+| **Workflow** | Git, Jira, SCRUM (Agile), unit testing |
+| **Backend & tools** | Java, Spring Boot, React, SQL |
+| **Languages** | Spanish, English |
+
+## Open to work
+
+I'm open to game development roles in Unity, gameplay and technical leadership. The best way to reach me is by [email](mailto:i.contrerasGuevara@outlook.es) or on [LinkedIn](https://www.linkedin.com/in/ivan-contreras-guevara/).
+
+---
+
+<sub>This repo holds the source of the portfolio site, built with plain HTML, CSS and JavaScript and hosted on GitHub Pages. Game art and logos © their respective owners.</sub>
